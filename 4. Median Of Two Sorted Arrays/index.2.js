@@ -15,7 +15,7 @@ var findMedianSortedArrays = function (nums1, nums2) {
         }
     }
     if (Number.isInteger(o)) {
-        let r = 0
+        let r;
         if (k >= m) r = nums2[l]
         else if (l >= n) r = nums1[k]
         else r = Math.min(nums1[k], nums2[l])
