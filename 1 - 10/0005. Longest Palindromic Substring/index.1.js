@@ -16,10 +16,10 @@ function isPalindrome(str){
  * @return {string}
  */
 var longestPalindrome = function(s) {
-    if(s.length === 1) return s
+    if(s.length < 4) return s[0] === s[s.length - 1]
     let tested = new Set(), palindrome = ""
     for(let i = 0; i < s.length; i++) {
-        if(tested.has(s[i])) continue;é
+        if(tested.has(s[i])) continue;
         let indexes = allIndexesOf(s[i], s)
         if(indexes.length === 1 && !palindrome.length) palindrome = s[i]
         else if(indexes.length){
