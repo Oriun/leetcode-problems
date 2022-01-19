@@ -16,7 +16,7 @@ function isPalindrome(str){
  * @return {string}
  */
 var longestPalindrome = function(s) {
-    if(s.length < 4) return s[0] === s[s.length - 1]
+    if(s.length < 4 && s[0] === s[s.length - 1]) return s
     let tested = new Set(), palindrome = ""
     for(let i = 0; i < s.length; i++) {
         if(tested.has(s[i])) continue;
