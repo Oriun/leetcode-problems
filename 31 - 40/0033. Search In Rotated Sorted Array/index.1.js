@@ -11,8 +11,7 @@ var search = function(nums, target) {
     let rotated = nums[j] > nums[k]
     let inLeftPart = target > nums[k]
     
-    let i = 10
-    while(k-j-1 && i){
+    while(k-j-1){
         l = Math.floor((j+k) * .5)
         if(nums[l] === target) return l
         if(rotated){
